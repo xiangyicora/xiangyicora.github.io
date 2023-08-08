@@ -1,0 +1,38 @@
+@font-face {
+    font-family: roboto_regular;
+    src: url(./assets/Roboto/Roboto-Regular.ttf);
+    font-weight: normal;
+}  
+
+@font-face {
+    font-family: roboto_bold;
+    src: url(./assets/Roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}  
+
+body {
+    padding: 1.5rem 2rem;
+    font-family: roboto_regular;
+}
+
+h1,h3,h4 {
+    font-family: roboto_bold;
+}
+
+h4 {
+    color: darkgreen;
+}
+
+#background_cover {
+    width: 100%;
+    height: auto;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.sub_heading {
+    margin-top: 2rem;
+    padding-left: 20px;
+}
