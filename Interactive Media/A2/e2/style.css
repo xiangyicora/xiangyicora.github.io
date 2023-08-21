@@ -1,0 +1,223 @@
+/* z-index order */
+@font-face {
+  font-family: Poppins-Regular;
+  src: url(./assets/Poppins/Poppins-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(./assets/Poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url(./assets/Poppins/Poppins-SemiBold.ttf);
+  font-weight: normal;
+}
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#f7fcfc;
+  --col-02:#141514;
+  --col-03:rgb(46, 115, 199);
+  --col-04:#9cc46c;
+  --col-05:rgb(249, 201, 124);
+  --border: 1px solid var(--col-02);
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  font-family: Poppins-Regular;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+a{
+  color: var(--col-03);
+}
+
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+}
+
+.FilterSection{
+margin-bottom: 20px;
+}
+
+.FilterBox1{
+  background-color: rgb(249, 201, 124);
+}
+
+.FilterBox2{
+  background-color: rgb(244, 191, 58);
+}
+
+.FilterBox3{
+  background-color: rgb(244, 181, 23);
+}
+
+.FilterBox4{
+  background-color: rgb(238, 170, 0);
+}
+
+.FilterButton{
+  background-color: black;
+  border: 3px solid black;
+  font-size: 14px;
+  border-radius: 8px;
+  color: white;
+  transition-duration: 0.4s;
+
+}
+
+.FilterButton:hover {
+  background-color: orange;
+  color:white;
+  border: 3px solid black;
+}
+/* 
+  this class will be applied to the last filter button clicked - remember because it's below .FilterButton it will overwrite
+  any duplicate properties
+*/
+.SelectedFilter{
+
+  background-color: orange;
+}
+
+
+#RecipeLink{
+  color: white
+}
+
+.RecipeName{
+  font-family: Poppins-Bold;
+  margin-bottom: 40px;
+}
+
+.Author{
+  text-align: end;
+  font-family: Poppins-SemiBold;
+}
+
+.RecipeImageContainer{
+
+}
+
+.ImgContainer{
+  position: relative;
+}
+
+.RecipeImg{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border: 4px solid var(--col-05);
+  padding: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.ImgContainer:hover .RecipeImg {
+  opacity: 0.3;
+}
+
+.ImgContainer:hover .middle{
+  opacity: 1;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: var(--col-04);
+  font-size: 25px;
+  font-family: Poppins-SemiBold;
+  padding: 20px;  
+}
+
+
+.Attribution{
+  font-size: x-small;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.Publisher{
+
+}
+
+.Cuisine{
+
+}
+
+.TimeToCook{
+
+}
+
+.SkillLevel{
+
+}
+
+.Course{
+
+}
+
+.Servings{
+
+}
+
+.Dietary{
+
+}
+
+.DatePublished{
+
+}
+
+.DateUpdated{
+
+}
+
+.SpecialEquipment{
+
+}
+
