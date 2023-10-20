@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #EBDED7;
+    box-sizing: border-box;
+}
+
+/* I used the same color scheme as Doraemon’s anywhere door for the color of the door. */
+.door-wrapper {
+  width: 295px;
+  height: 495px;
+  margin: 70px auto 40px;
+  border: 18px solid #de77b0;
+  border-bottom: none;
+  perspective: 1200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 10px 10px 15px -5px #2c231f;
+  .door {
+    height: 100%;
+    background: #ed87bf;
+    border-bottom: none;
+    cursor: pointer;
+    transition: all 1000ms ease-in;
+    transform-origin: left;
+    position: relative;
+    &:before {
+    content: '';
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #7ac7b8;
+  display: block;
+  position: absolute;
+  top: calc(50% - 5px);
+  border: 1px solid #61a396;
+  right: 7px;
+    }
+  }
+}
+
+.openDoor {
+  transform: rotateY(-160deg);
+}
+
+.closeDoor {
+  transform: rotateY(0deg);
+}
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#type{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+#load-link{
+  background-color: #EBDED7;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#171219;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 4px 4px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#load-link:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px; 
+}
+
+#load-throbber {
+  position: relative;
+  height: 10px;
+  width: 20%;
+  border: 2px solid #171219;
+  border-radius: 15px;
+  display: none;
+}
+
+#load-throbber .color{
+  position: absolute;
+  background-color: #171219;
+  width: 0px;
+  height: 8px;
+  border-radius: 15px;
+  animation: progres 3s infinite linear;    
+}
+
+@keyframes progres{
+  0%{
+    width: 0%;
+  }
+  25%{
+      width: 50%;
+  }
+  50%{
+      width: 75%;
+  }
+  75%{
+      width: 85%;
+  }
+  100%{
+      width: 100%;
+  }
+};
+
+
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}

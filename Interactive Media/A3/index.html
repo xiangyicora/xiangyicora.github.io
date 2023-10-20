@@ -8,15 +8,29 @@
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
+        <script src="load.js" defer></script>
 
-        <title>nothing</title>
+        <title>loading page</title>
+
     </head>
 
-    <body>
+    <!-- This is an "anywhere door" music player website.  -->
 
-        <h1>This is Cora's page</h1>
+    <!-- When I was a kid, I wished I could have cool gadgets owned by Doraemon, especially Anywhere Door, 
+    which was the inspiration for this website.   -->
 
+    <body id="load-body" >
+
+        <p id="type-effect"></p>
+       
+        <button id="load-link" onclick="loadPageAfterDelay(3000, './main.html')">Enjoy it!</button>
+
+        <div id="load-throbber">
+
+          <div class="color"></div>
+
+        </div>
+  
     </body>
 
 </html>
